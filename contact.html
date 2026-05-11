@@ -4,184 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        body{
-    background-color: rgb(250, 255, 254);
-    margin: 0;
-    font-family: Arial, Helvetica, ;
-    
+        body {
+            background-color: rgb(250, 255, 254);
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        * { box-sizing: border-box; }
 
-}
-*{
-    box-sizing: border-box;
-}
-.toplink{
-    background-color: rgb(51, 51, 50);
-    overflow: hidden;
-}
-.toplink a{
-    color: #ffffff;
-    float: left;
-    display: block;
-    text-decoration: none;
-    text-align: left;
-    padding: 14px 16px;
-}
-.toplink a:hover{
-    background-color: #ffffff;
-    color: rgb(51, 51, 50);
-    text-decoration: none;
-}
-.banner{
-    background-color: #5f5e5e;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-.left_side_bar{
-    float: left;
-    width: 15%;
-    background-color: #ebebeb;
-    padding: 20px;
-}
-.content{
-    float: left;
-    width: 70%;
-    background-color: #ebebeb;
-    padding: 20px;
-    border-left:#5f5e5e 1px dashed;
-    border-right:#5f5e5e 1px dashed;
-}
-.right_side_bar{
-    float: left;
-    width: 15%;
-    background-color: #ebebeb;
-    padding: 20px;
-}
-.footer{
-    background-color: rgb(51, 51, 50);
-    color: #ffffff;
-    font-size: small;
-    text-align: center;
-    padding: 10px;
-}
+        .toplink {
+            background-color: rgb(51, 51, 50);
+            overflow: hidden;
+        }
+        .toplink a {
+            color: #ffffff;
+            float: left;
+            display: block;
+            text-decoration: none;
+            text-align: left;
+            padding: 14px 16px;
+        }
+        .toplink a:hover {
+            background-color: #ffffff;
+            color: rgb(51, 51, 50);
+        }
 
+        .banner {
+            background-color: #5f5e5e;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
 
-h1{
-    text-transform: uppercase;
-}
-h2{
-    text-decoration: none;
-    color: #373737;
-}
-p{
-    text-align: justify;
-    }
-.underline{
-    text-decoration: underline;
-}
+        .left_side_bar {
+            float: left;
+            width: 15%;
+            background-color: #ebebeb;
+            padding: 20px;
+        }
+        .content {
+            float: left;
+            width: 70%;
+            background-color: #ebebeb;
+            padding: 20px;
+            border-left: #5f5e5e 1px dashed;
+            border-right: #5f5e5e 1px dashed;
+        }
+        .right_side_bar {
+            float: left;
+            width: 15%;
+            background-color: #ebebeb;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: rgb(51, 51, 50);
+            color: #ffffff;
+            font-size: small;
+            text-align: center;
+            padding: 10px;
+            clear: both;
+        }
+
+        h1 { text-transform: uppercase; }
+        h2 { text-decoration: none; color: #373737; }
+        p  { text-align: justify; }
+        .underline { text-decoration: underline; }
+
+        /* ── phone row ── */
+        .phone-row {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .phone-row select {
+            padding: 4px 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 0.88rem;
+            background: #fafafa;
+            width: 175px;
+        }
+        .phone-row input[type="tel"] {
+            padding: 4px 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 0.92rem;
+            background: #fafafa;
+            width: 200px;
+        }
+        .phone-row select:focus,
+        .phone-row input[type="tel"]:focus {
+            outline: none;
+            border-color: #5f5e5e;
+        }
+
+        /* error text */
+        .phone-error {
+            display: none;
+            color: #cc0000;
+            font-size: 0.8rem;
+        }
+        .phone-error.show { display: block; }
     </style>
 </head>
 <body>
 
-    <div class="toplink">    
+    <!-- NAV -->
+    <div class="toplink">
+        <a href="./">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="products.html">Products</a>
+    </div>
 
-   <a href="./">Home</a>
-   <a href="about.html">About</a> 
-   <a href="projects.html">Projects</a> 
-   <a href="contact.html">Contact</a> 
-   <a href="hobbies.html">Hobbies</a>
-   <a href="products.html">Products</a>
-   </div>
-
-   <div class="banner">
+    <!-- BANNER -->
+    <div class="banner">
         <h1>Talk to us</h1>
     </div>
 
+    <!-- LAYOUT -->
     <div class="row">
         <div class="left_side_bar">
             <h3>Left Side Bar</h3>
         </div>
-    <div class="content">
-   
-   <h1>Contact Us</h1>
-   <p>This is the contact page of our website.</p>
 
-    <form action="">
+        <div class="content">
 
-        <h4>Name:</h4>
-        <input type="text" name="" placeholder="Enter your Name"
-        required><br>
-        <h4>Email:</h4>
-        <input type="email" name="" placeholder="Enter your Email"
-        required><br>
-        <h4>Phone No:</h4>
-        <input type="number" name="" placeholder="Enter your Phone Number"
-        required><br>
-        <h4>Password:</h4>
-        <input type="password" name="" placeholder="Enter your Password"
-        required><br>
-        <h4>DOB:</h4>
-        <input type="date" name="" placeholder="Enter your Date of Birth"
-        required><br>
-        <input type="time" name="" placeholder="Enter your Time of Birth"
-        required><br>
-        <input type="color" name="" placeholder="Enter your Favourite Color"
-        required><br>
-        <input type="range" name="" placeholder="Enter your Age"
-        required><br>
-        <input type="url" name="" placeholder="Enter your Website"
-        required><br>
-        <input type="search" name="" placeholder="Search for something" required><br>
-        <input type="file" name="" placeholder="Upload a file" required><br>
+            <h1>Contact Us</h1>
+            <p>This is the contact page of our website.</p>
 
-        <input type="radio" name="rating" value="1"> 1 <br>
-        <input type="radio" name="rating" value="2"> 2 <br>
-        <input type="radio" name="rating" value="3"> 3 <br>
-        <input type="radio" name="rating" value="4"> 4 <br>
-        <input type="radio" name="rating" value="5"> 5 <br>
+            <form id="contactForm" action="">
 
-        <input type="checkbox" name="subscribe" value="yes"> Subscribe to BBIT newsletter<br>
-        <input type="checkbox" name="subscribe" value="yes"> Subscribe to BICS newsletter<br>
+                <h4>Name:</h4>
+                <input type="text" name="" placeholder="Enter your Name" required><br>
 
-        <select name="" id="">
-            <option value="">Select your country</option>
-            <option value="kenya">Kenya</option>
-            <option value="uganda">Uganda</option>
-            <option value="tanzania">Tanzania</option>
-            <option value="rwanda">Rwanda</option>
-        </select>
-        <br>
+                <h4>Email:</h4>
+                <input type="email" name="" placeholder="Enter your Email" required><br>
 
-        <textarea name="" id="" cols="30" rows="5" placeholder="Enter your message"></textarea>
+                <h4>Phone No:</h4>
+                <div class="phone-row">
+                    <select id="countryCode" title="Select country code">
+                        <option value="+254">🇰🇪 Kenya (+254)</option>
+                        <option value="+256">🇺🇬 Uganda (+256)</option>
+                        <option value="+255">🇹🇿 Tanzania (+255)</option>
+                        <option value="+250">🇷🇼 Rwanda (+250)</option>
+                        
+                    </select>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name=""
+                        placeholder="Enter Phone Number"
+                        maxlength="10"
+                        required>
+                </div>
+                <span class="phone-error" id="phoneError">
+                    Phone number must be exactly 10 digits.
+                </span><br>
 
-        <br>
+                <h4>Password:</h4>
+                <input type="password" name="" placeholder="Enter your Password" required><br>
 
-        <input type="submit" value="Upload Details"><br>
-        <button type="submit">Submit Details</button><br>
-    </form>
+                <h4>DOB:</h4>
+                <input type="date" name="" placeholder="Enter your Date of Birth" required><br>
 
+                <input type="time" name="" placeholder="Enter your Time of Birth" required><br>
 
+                <input type="color" name="" placeholder="Enter your Favourite Color" required><br>
 
-   <dl> 
-    <dt>Email</dt>
-    <dd><a href="email:ngugi.michael@strathmore.edu"></a>ngugi.michael@strathmore.edu</a></dd>
-    <dt>Phone</dt>
-    <dd><a href="tel:+254701162901">+254701162901</a></dd>
-    <dt>Address</dt>
-    <dd>123 Mada, Nairobi</dd>
-    </dl>
+                <input type="range" name="" placeholder="Enter your Age" required><br>
+
+                <input type="url" name="" placeholder="Enter your Website" required><br>
+
+                <input type="search" name="" placeholder="Search for something" required><br>
+
+                <input type="file" name="" placeholder="Upload a file" required><br>
+
+                <input type="radio" name="rating" value="1"> 1 <br>
+                <input type="radio" name="rating" value="2"> 2 <br>
+                <input type="radio" name="rating" value="3"> 3 <br>
+                <input type="radio" name="rating" value="4"> 4 <br>
+                <input type="radio" name="rating" value="5"> 5 <br>
+
+                <input type="checkbox" name="subscribe" value="yes"> Subscribe to BBIT newsletter<br>
+                <input type="checkbox" name="subscribe" value="yes"> Subscribe to BICS newsletter<br>
+
+                <select id="countryCode" title="Select country code">
+                <option value="+254">Kenya (+254)</option>
+                <option value="+256">Uganda (+256)</option>
+                <option value="+255">Tanzania (+255)</option>
+                <option value="+250">Rwanda (+250)</option>
+                </select>
+                <br>
+
+                <textarea name="" id="" cols="30" rows="5"
+                    placeholder="Enter your message"></textarea>
+                <br>
+
+                <input type="submit" value="Upload Details"><br>
+                <button type="submit">Submit Details</button><br>
+
+            </form>
+
+          
+            <dl>
+                <dt>Email</dt>
+                <dd><a href="mailto:ngugi.michael@strathmore.edu">ngugi.michael@strathmore.edu</a></dd>
+                <dt>Phone</dt>
+                <dd><a href="tel:+254701162901">+254701162901</a></dd>
+                <dt>Address</dt>
+                <dd>123 Mada, Nairobi</dd>
+            </dl>
+
         </div>
+
         <div class="right_side_bar">
             <h3>Right Side Bar</h3>
         </div>
     </div>
 
-    <div class="footer">
-        &#169; BBIT 2026
-    </div>
-   
+    <div class="footer">&#169; BBIT 2026</div>
+
 </body>
 </html>
-
